@@ -5,7 +5,6 @@
     4.    Udskrive liste over de tre medlemmer, der mangler at betale mest.
 """
 import pickle
-from math import inf
 
 filename = 'betalinger.pk'
 
