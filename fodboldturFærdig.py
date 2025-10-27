@@ -9,8 +9,11 @@ import pickle
 filename = 'betalinger.pk'
 
 TOTAL_BELØB = 4500
-
-infile = open(filename,'rb')
+try:
+    infile = open(filename,'rb')
+except OSError as e:
+    print("File not found")
+    exit(1)
 fodboldtur : dict = pickle.load(infile)
 infile.close()
 
@@ -39,9 +42,21 @@ def indbetal():
         return
     betaling = input("Indtast beløb ")
     try:
-        betaling = int(betaling)
-    except Exception as e:
+        betaling = float(betaling)
+    except ValueError as e:
         print("Invalidt input ",e)
+        return
+    except TypeError as e:
+        print("invalidt input",e)
+        return
+    except OverflowError as e:
+        print("invalidt input",e)
+        return
+    if betaling >= float("inf"):
+        print("for stor værdi")
+        return
+    if betaling < 0:
+        print("invalidt beløb")
         return
     fodboldtur[navn] += betaling
     
