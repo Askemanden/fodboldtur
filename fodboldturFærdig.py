@@ -12,7 +12,7 @@ TOTAL_BELØB = 4500
 try:
     infile = open(filename,'rb')
 except OSError as e:
-    print("File not found")
+    print("Fil ikke fundet. Opret venligst ny bruger data fil")
     exit(1)
 fodboldtur : dict = pickle.load(infile)
 infile.close()
