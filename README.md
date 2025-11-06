@@ -11,6 +11,9 @@ Opgave til programmering
 ![20251025_162303](https://github.com/user-attachments/assets/e6062b2d-9866-4964-8063-05f61777d0e4)
 
 ## GUI APP
+Hvordan undgås bruger fejl
+Giver en fejlbesked ved fejl i bruger input ved indbetaling.
+Giver en askyesnocancel når brugeren forsøger at lukke programmet uden at gemme.
 kilder
 
 https://stackoverflow.com/questions/28782974/python-tkmessagebox-askyesnocancel-3-options-boolean-output
